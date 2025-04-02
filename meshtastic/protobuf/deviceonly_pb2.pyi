@@ -79,6 +79,8 @@ class UserLite(google.protobuf.message.Message):
     IS_LICENSED_FIELD_NUMBER: builtins.int
     ROLE_FIELD_NUMBER: builtins.int
     PUBLIC_KEY_FIELD_NUMBER: builtins.int
+    SAGA_GROUP_ID_FIELD_NUMBER: builtins.int
+    SAGA_ROLE_FIELD_NUMBER: builtins.int
     macaddr: builtins.bytes
     """
     This is the addr of the radio.
@@ -114,6 +116,8 @@ class UserLite(google.protobuf.message.Message):
     The public key of the user's device.
     This is sent out to other nodes on the mesh to allow them to compute a shared secret key.
     """
+    saga_group_id: builtins.int
+    saga_role: builtins.int
     def __init__(
         self,
         *,
@@ -124,8 +128,10 @@ class UserLite(google.protobuf.message.Message):
         is_licensed: builtins.bool = ...,
         role: meshtastic.protobuf.config_pb2.Config.DeviceConfig.Role.ValueType = ...,
         public_key: builtins.bytes = ...,
+        saga_group_id: builtins.int = ...,
+        saga_role: builtins.int = ...,
     ) -> None: ...
-    def ClearField(self, field_name: typing.Literal["hw_model", b"hw_model", "is_licensed", b"is_licensed", "long_name", b"long_name", "macaddr", b"macaddr", "public_key", b"public_key", "role", b"role", "short_name", b"short_name"]) -> None: ...
+    def ClearField(self, field_name: typing.Literal["hw_model", b"hw_model", "is_licensed", b"is_licensed", "long_name", b"long_name", "macaddr", b"macaddr", "public_key", b"public_key", "role", b"role", "saga_group_id", b"saga_group_id", "saga_role", b"saga_role", "short_name", b"short_name"]) -> None: ...
 
 global___UserLite = UserLite
 
